@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #1c1c1c;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/*Collections*/
+.collections {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.collections p{
+	font-size: 1.2em;
+}
+
+.collections a{
+	font-size: 1em;
+	color: #f57082;
+	text-decoration: none;
+}
+
+.collections .fa-caret-right{
+	margin-left: 10px;
+}
+
+.collection-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	margin-bottom: 100px;
+}
+
+.collection-grid .collection-box {
+	position: relative;
+}
+
+.collection-grid .collection-box img {
+	width: 100%;
+	border-radius: 8px;
+}
+
+.collection-grid .collection-box .collection-title {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 10px 15px;
+}
+
+.collection-grid .collection-box .collection-title h3 {
+	font-weight: 500;
+	color: #fff;
+}
+
+.collection-grid .collection-box .collection-title p {
+	color: #fff;
+}
+
+
+/*Localities*/
+
+h1.local-title {
+	color: #363636;
+	font-size: 2.2em;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.container-local-boxes {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	row-gap: 20px;
+}
+
+.container-local-boxes .local-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	font-size: 1.5em;
+	color: #1c1c1c;
+	border: 1px solid #e8e8e8;
+	border-radius: 8px;
+	box-shadow: 0 1.4px 2.8px rgba(28,28,28,0.08);
+	cursor: pointer;
+}
+
+.container-local-boxes .local-box span{
+    font-size: .7em;
+
+}
+
+.container-local-boxes .local-box:hover {
+	box-shadow: 0 1.4px 2.8px 2px rgba(28,28,28,0.08);
+}
+
+.local-box .fa-chevron-right {
+	font-size: small;
+}
+
+#more-items{
+    transform: rotate(90deg);
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/*Mobile View*/
+@media(max-width: 500px) {
+
+	.collections {
+	flex-direction: column;
+	justify-content: center;
+	}
+
+	.collection-grid {
+	grid-template-columns: repeat(2, 1fr);
+	}
+
+	.container-local-boxes {
+	grid-template-columns: repeat(1, 1fr);
+	}
+
+}
